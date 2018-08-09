@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_view_comment"
+
+    tools:context="com.ltd.admin.appchat.Comment.CommentActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout_title_comment"
+        android:background="@color/white"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heartlike"
+            android:layout_marginLeft="6dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Likes"
+            android:id="@+id/txt_like_comment"
+            android:layout_marginLeft="6dp"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/img_btn_like_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="200dp"
+            android:src="@drawable/dislike"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title_comment"
+        android:padding="16dp"
+        android:id="@+id/comment_list"
+        android:layout_above="@+id/linearLayout2">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/linearLayout2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:id="@+id/linearLayout">
+            <ImageView
+                android:id="@+id/emoji_send_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="15"
+                android:src="@drawable/smiley"/>
+
+            <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                android:id="@+id/edt_send_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="70"
+                android:ems="10"
+                android:hint="Viết bình luận"
+                android:layout_gravity="center"
+                android:background="@drawable/comment_background"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="textMultiLine"
+                app:emojiconSize="28sp" />
+
+            <ImageView
+                android:id="@+id/img_send_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:src="@drawable/ic_send_black_24dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ltd.admin.appchat.LoginAccount.LoginActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/msg"
+        android:layout_marginTop="76dp"
+        android:id="@+id/img_default"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/login_toolbar"/>
+
+    <EditText
+        android:id="@+id/edit_text_email_id_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email"
+
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="16dp"
+        android:padding="10dp"
+        android:drawableTint="@android:color/holo_blue_dark"
+        android:drawableLeft="@drawable/icon_user_login"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorPrimary"
+        android:background="@drawable/edt_backdground"
+        android:layout_marginBottom="155dp"
+        android:layout_above="@+id/btn_login_app"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/custom_button_ui"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:id="@+id/btn_login_app" />
+
+
+</RelativeLayout>

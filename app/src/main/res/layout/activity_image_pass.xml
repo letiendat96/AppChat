@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_600"
+    tools:context="com.ltd.admin.appchat.VerifyAccount.ImagePassActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/default_image"
+        android:layout_marginTop="34dp"
+        android:id="@+id/img_default"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/default_image"
+        android:layout_marginTop="18dp"
+        android:id="@+id/img_default_user"
+        android:layout_below="@+id/img_default"
+        android:layout_alignStart="@+id/img_default" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_image_pass"
+        android:text="Log"
+        android:background="@color/red_600"
+        android:layout_above="@+id/btn_verify_img"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:background="@color/blue_600"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"
+        android:id="@+id/btn_verify_img" />
+
+
+</RelativeLayout>

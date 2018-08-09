@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/default_image"
+            android:id="@+id/all_users_profile_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="user name"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:id="@+id/all_users_name"
+                    android:layout_weight="95"/>
+
+                <ImageView
+                    android:id="@+id/online_status"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:src="@drawable/if_status_online"
+                    android:layout_weight="5"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="user status"
+                android:textSize="15sp"
+                android:id="@+id/all_users_status"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

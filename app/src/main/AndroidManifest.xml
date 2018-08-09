@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ltd.admin.appchat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <application
+        android:name=".Chat.ChatOffline"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".WelcomePage.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".WelcomePage.StartPageActivity" />
+        <activity
+            android:name=".LoginAccount.LoginActivity"
+            android:parentActivityName=".WelcomePage.StartPageActivity" />
+        <activity
+            android:name=".RegisterAccount.RegisterActivity"
+            android:parentActivityName=".WelcomePage.StartPageActivity" />
+        <activity
+            android:name=".Profile.PersonalPageActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".AllPosts.StatusActivity"
+            android:parentActivityName=".Profile.PersonalPageActivity" />
+        <activity
+            android:name=".AllUserChat.AllUsersActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Profile.ProfileActivity" />
+        <activity
+            android:name=".VerifyAccount.ImagePassActivity"
+            android:parentActivityName=".LoginAccount.LoginActivity" />
+        <activity
+            android:name=".Chat.ChatActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RegisterAccount.RegisterAuthActivity"
+            android:parentActivityName=".RegisterAccount.RegisterActivity" />
+        <activity
+            android:name=".LoginAccount.VerifyPassActivity"
+            android:parentActivityName=".LoginAccount.LoginActivity" />
+        <activity android:name=".VideoCallActivity" />
+        <activity android:name=".AllPosts.ClickPostActivity" />
+        <activity android:name=".Comment.CommentActivity" />
+        <activity android:name=".Hardware.HardwareActivity"></activity>
+    </application>
+
+</manifest>

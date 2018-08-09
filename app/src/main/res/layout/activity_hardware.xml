@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.ltd.admin.appchat.Hardware.HardwareActivity">
+
+    <TextView
+        android:id="@+id/txt_notice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_weight="10"
+        android:background="@drawable/chat_rounded_rect_bg"
+        android:padding="6dp"
+        android:text="Thông báo"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_notice"
+        android:id="@+id/layout_temp_humid"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:weightSum="100"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/chat_rounded_rect_bg"
+        android:layout_weight="40">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhiệt độ"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_below="@+id/txt_title"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <io.feeeei.circleseekbar.CircleSeekBar
+                    android:layout_gravity="center"
+                    android:id="@+id/seekbar_temp"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:wheel_pointer_radius="6dp"
+                    app:wheel_can_touch="false"
+                    app:wheel_reached_width="12dp"
+                    app:wheel_unreached_width="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_temp_value"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Độ ẩm"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_below="@+id/txt_title" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <io.feeeei.circleseekbar.CircleSeekBar
+                    android:id="@+id/seekbar_humid"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:wheel_pointer_radius="6dp"
+                    app:wheel_can_touch="false"
+                    app:wheel_reached_width="12dp"
+                    app:wheel_unreached_width="18dp"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:id="@+id/txt_humid_value"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_setting_temp_humid"
+        android:layout_below="@+id/layout_temp_humid"
+        android:padding="6dp"
+        android:weightSum="100"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical"
+        android:background="@drawable/chat_rounded_rect_bg"
+        android:layout_weight="20">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_temp"
+            android:orientation="horizontal"
+
+            android:padding="6dp"
+            android:weightSum="100"
+            android:background="@drawable/message_attack_me">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="10"
+                android:src="@drawable/celsius"
+                android:layout_gravity="center"/>
+
+            <SeekBar
+                android:id="@+id/seek_temp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="70"
+                android:max="100" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:id="@+id/txt_temp_setting"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_humid"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="6dp"
+            android:padding="6dp"
+            android:background="@drawable/message_protect_me">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="10"
+                android:src="@drawable/humidity"
+                android:layout_gravity="center"/>
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/seek_humid"
+                android:max="100"
+                android:layout_weight="70"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:id="@+id/txt_humid_setting"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_setting_temp_humid"
+        android:padding="10dp"
+        android:weightSum="100"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:background="@drawable/chat_rounded_rect_bg"
+        android:layout_weight="20">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:src="@drawable/lampoff"
+            android:background="@drawable/custom_button"
+            android:id="@+id/btn_lamp"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:src="@drawable/fanoff"
+            android:background="@drawable/custom_button"
+            android:id="@+id/btn_fan"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:id="@+id/layout_text_send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/chat_rounded_rect_bg"
+        android:layout_weight="10">
+
+        <EditText
+            android:id="@+id/edt_send_message"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="80"
+            android:ems="10"
+            android:hint="Nhập tin nhắn"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <ImageView
+            android:id="@+id/img_send"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_weight="20"
+            android:src="@drawable/ic_send_black_24dp" />
+    </LinearLayout>
+
+</LinearLayout>

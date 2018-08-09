@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Post status"
+        android:icon="@drawable/ic_add_circle_outline_black_24dp"
+        android:id="@+id/menu_add_post"
+        />
+    <item android:title="Change avatar"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:id="@+id/menu_change_profile_picture"
+        />
+    <item android:title="Change cover photo"
+        android:icon="@drawable/ic_photo_library_black_24dp"
+        android:id="@+id/menu_change_cover_photo"
+        />
+
+
+</menu>

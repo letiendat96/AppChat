@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Search"
+        android:id="@+id/main_all_user_button"
+        app:showAsAction="never">
+    </item>
+    <item android:title="View your profile"
+        android:id="@+id/main_account_setting"
+        app:showAsAction="never">
+    </item>
+    <item android:title="Control Device IoT"
+        android:id="@+id/main_device_setting"
+        app:showAsAction="never">
+    </item>
+
+    <item android:title="Log Out"
+        android:id="@+id/main_logout"
+        app:showAsAction="never">
+    </item>
+
+</menu>
